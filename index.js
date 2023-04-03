@@ -34,9 +34,9 @@ app.get('/gpt/:text', async (req, res) => {
     console.log(prompt);
     
     const response = await openai.createCompletion({
-      model: "text-davinci-003",
+      model: "gpt-3.5-turbo",
       prompt: prompt,
-      temperature: 0.5,
+      temperature: 0.8,
       max_tokens: 128,
       top_p: 1,
       frequency_penalty: 0,
